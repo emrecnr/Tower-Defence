@@ -7,6 +7,7 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     private float speed = 10f;
+    int damageAmount = 2;
 
     Rigidbody2D arrowrb2;
 
@@ -29,5 +30,14 @@ public class Arrow : MonoBehaviour
         transform.right = direction;
         arrowrb2.velocity = direction.normalized * speed;
        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(damageAmount);
+            Destroy(gameObject);
+        }
     }
 }
