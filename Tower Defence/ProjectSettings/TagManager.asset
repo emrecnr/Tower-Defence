@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 431605871
+    locked: 0
+  - name: Tilemap
+    uniqueID: 2162185279
+    locked: 0
+  - name: Enemies
+    uniqueID: 747874075
+    locked: 0
+  - name: ArcherTowerTop
+    uniqueID: 3988348969
+    locked: 0
+  - name: Archer
+    uniqueID: 1713961039
+    locked: 0
+  - name: ArcherTower
+    uniqueID: 2141098765
+    locked: 0
+  - name: Arrow
+    uniqueID: 1160179239
+    locked: 0
