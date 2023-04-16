@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovementEnemy : MonoBehaviour
 {
     // Düþmanýn hedefine doðru hareket ettiði hýz
-     float speed = 2f;
+     float speed = 1f;
 
     // Düþmanýn mevcut hedef noktasý
     private int targetIndex = 0;

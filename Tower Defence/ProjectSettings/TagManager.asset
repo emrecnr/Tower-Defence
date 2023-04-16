@@ -48,9 +48,6 @@ TagManager:
   - name: Tilemap
     uniqueID: 2162185279
     locked: 0
-  - name: Enemies
-    uniqueID: 747874075
-    locked: 0
   - name: ArcherTowerTop
     uniqueID: 3988348969
     locked: 0
@@ -59,6 +56,9 @@ TagManager:
     locked: 0
   - name: ArcherTower
     uniqueID: 2141098765
+    locked: 0
+  - name: Enemies
+    uniqueID: 747874075
     locked: 0
   - name: Arrow
     uniqueID: 1160179239
