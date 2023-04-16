@@ -29,7 +29,7 @@ public class ArcherTowerController : MonoBehaviour
     {
         Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(transform.position, range);
 
-        if (fireCountdown <= 0f && enemiesInRange.Length > 0)
+        if (fireCountdown <= 0f && enemiesInRange.Length > 0 && enemiesInRange[0].CompareTag("Enemy"))
         {
             // Menzile giren ilk düþmana saldýrýr.
             target = enemiesInRange[0].transform;

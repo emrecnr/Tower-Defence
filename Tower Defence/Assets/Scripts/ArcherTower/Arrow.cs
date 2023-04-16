@@ -20,7 +20,7 @@ public class Arrow : MonoBehaviour
     
     void Update()
     {
-        if (ArcherTowerController.instance.target==null)
+        if (ArcherTowerController.instance.target == null)
         {
             Destroy(gameObject);
             return;

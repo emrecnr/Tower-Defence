@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovementEnemy : MonoBehaviour
 {
     // Düþmanýn hedefine doðru hareket ettiði hýz
-    public float speed = 2f;
+     float speed = 2f;
 
     // Düþmanýn mevcut hedef noktasý
     private int targetIndex = 0;
@@ -14,6 +14,8 @@ public class MovementEnemy : MonoBehaviour
     private bool isMoving = true;
 
     private PathFinding pathFinding;
+
+    int damageAmount = 1;
     private void Update()
     {
         if (isMoving)
@@ -44,6 +46,7 @@ public class MovementEnemy : MonoBehaviour
             // Eðer tüm hedef noktalarý gezdiyse, düþmaný yok et
             if (targetIndex >= pathFinding.pathPoints.Count)
             {
+                HealthSystem.instance.TakeDamage(damageAmount);
                 Destroy(gameObject);
             }
         }
