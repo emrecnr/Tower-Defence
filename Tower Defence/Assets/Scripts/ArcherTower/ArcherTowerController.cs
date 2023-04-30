@@ -17,39 +17,9 @@ public class ArcherTowerController : MonoBehaviour
     {
         instance = this;
     }
-    
-    //void FindTarget()
-    //{
-    //    GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-    //    float shortestDistance = Mathf.Infinity;
-    //    GameObject nearestEnemy = null;
-    //    foreach (GameObject enemy in enemies) 
-    //    {
-    //        float disctanceToEnemy = Vector3.Distance(transform.position,enemy.transform.position);
-    //        if (disctanceToEnemy<shortestDistance)
-    //        {
-    //            shortestDistance = disctanceToEnemy;
-    //            nearestEnemy = enemy;
-    //        }
-    //    }
-    //    if (nearestEnemy!=null&&shortestDistance<= range)
-    //    {
-    //        currentTarget = nearestEnemy.transform; 
-    //    }
-    //}
-
+   
     void Update()
     {
-
-        //if (currentTarget== null) 
-        //{
-
-        //    return;
-
-        //}
-
-
-
 
         Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(transform.position, range);
 
@@ -85,7 +55,7 @@ public class ArcherTowerController : MonoBehaviour
     }
     
     
-    void OnDrawGizmosSelected()
+    void OnDrawGizmosSelected() //Kule range gösterimi
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);

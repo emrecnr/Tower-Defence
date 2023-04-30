@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5024467588637791527}
   - component: {fileID: 4129934387348941979}
   - component: {fileID: 3549884892311192482}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3622578108076618318}
   - component: {fileID: 8068506377943233417}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,8 @@ GameObject:
   - component: {fileID: -688895434957176790}
   - component: {fileID: 4861389198583280175}
   - component: {fileID: -488157542833096394}
-  m_Layer: 0
+  - component: {fileID: 577562084654626577}
+  m_Layer: 6
   m_Name: 2_enemies_1_WALK_000
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -266,7 +267,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 747874075
-  m_SortingLayer: 3
+  m_SortingLayer: 7
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 794b57c93dd68204c950bcb483e86177, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -291,7 +292,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a41edcebe5e1bc24f8b9245511fb60eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
 --- !u!61 &4861389198583280175
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -308,7 +308,7 @@ BoxCollider2D:
   m_Offset: {x: -0.02419135, y: 0.5597669}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.32915267, y: 0.16302365}
+    pivot: {x: 0.3291, y: 0.163}
     oldSize: {x: 1.9453125, y: 1.6875}
     newSize: {x: 1.9453125, y: 1.6875}
     adaptiveTilingThreshold: 0.5
@@ -332,6 +332,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   healthSlider: {fileID: 8068506377943233417}
+--- !u!95 &577562084654626577
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5175676596693452154}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e86f4f1670e223a4a850c774782dcbd4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5783493294648365510
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,7 +364,7 @@ GameObject:
   - component: {fileID: 8916743530673970682}
   - component: {fileID: 4853194928234330654}
   - component: {fileID: 7315416858492420056}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,7 +438,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6947328216789715742}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,7 +477,7 @@ GameObject:
   - component: {fileID: 7372025837947535836}
   - component: {fileID: 4815815526625237678}
   - component: {fileID: 6557290420866930168}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}

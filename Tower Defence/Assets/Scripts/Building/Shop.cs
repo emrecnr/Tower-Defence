@@ -4,21 +4,26 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    BuildManager buildManager;
+    public TowerBluePrint archerTower;
+    public TowerBluePrint magicTower;
+    public TowerBluePrint stoneTower;
 
-    private void Start()
-    {
-        buildManager = BuildManager.instance;
-    }
-    public void PurchaseArcherTower()
+    
+    public void SelectArcherTower()
     {
         Debug.Log("Archer Tower Purchased");
-        buildManager.SetTowerBuild(buildManager.archerTowerPref);
+        BuildManager.instance.SelectTowerBuild(archerTower);
     }
 
-    public void PurchaseAnotherTower()
+    public void SelectMagicTower()
     {
         Debug.Log("Magic Tower Purchased");
-        buildManager.SetTowerBuild(buildManager.magicTowerPref);
+        BuildManager.instance.SelectTowerBuild(magicTower);
+    }
+
+    public void SelectStoneTower() 
+    {
+        Debug.Log("Stone Tower Purchased");
+        BuildManager.instance.SelectTowerBuild(stoneTower);
     }
 }

@@ -10,20 +10,44 @@ public class BuildManager : MonoBehaviour
     {
         instance = this;
     }
-    private GameObject towerBuild; // build edilecek kule
+    private TowerBluePrint towerBuild; // build edilecek kule
+    private BuildPoint selectedPoint;
+    
+
+    public bool CanBuild { get { return towerBuild != null; } }
+    public bool HasMoney { get { return MoneySystem.money>= towerBuild.cost; } }
 
     public GameObject archerTowerPref;// okçu kule prefab
     public GameObject magicTowerPref; // büyücü kule prefab
+    public GameObject stoneTowerPref; // taþçý kule prefab
 
+    public BuildPointUI buildPointUI;
     
-
-
-    public GameObject GetTowerBuild()
+    
+    public void SelectPoint(BuildPoint buildPoint)
     {
-        return towerBuild;
+        if (selectedPoint == buildPoint)
+        {
+            NoSelectNode();
+            return;
+        }
+        selectedPoint = buildPoint;
+        towerBuild = null;
+        buildPointUI.SetTarget(buildPoint);
     }
-    public void SetTowerBuild(GameObject tower)
+    public void NoSelectNode()
+    {
+        selectedPoint = null;
+        buildPointUI.Hide();
+    }
+   public void SelectTowerBuild(TowerBluePrint tower)
     {
         towerBuild = tower;
+        NoSelectNode();
     }
-}
+    public TowerBluePrint GetTowerToBuild() 
+    { 
+        return towerBuild;
+    
+    }
+}  

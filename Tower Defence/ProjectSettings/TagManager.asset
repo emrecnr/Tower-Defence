@@ -9,10 +9,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Stone
   - Water
   - UI
-  - 
+  - Enemies
   - 
   - 
   - 
@@ -48,6 +48,9 @@ TagManager:
   - name: Tilemap
     uniqueID: 2162185279
     locked: 0
+  - name: BuildPoint
+    uniqueID: 3834337791
+    locked: 0
   - name: ArcherTowerTop
     uniqueID: 3988348969
     locked: 0
@@ -60,6 +63,15 @@ TagManager:
   - name: Enemies
     uniqueID: 747874075
     locked: 0
+  - name: StoneTowerTop
+    uniqueID: 1205877651
+    locked: 0
+  - name: StoneTower
+    uniqueID: 1944334901
+    locked: 0
   - name: Arrow
     uniqueID: 1160179239
+    locked: 0
+  - name: BuildUI
+    uniqueID: 1648629481
     locked: 0
