@@ -1,11 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
+
 
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject enemyPrefab; // Oluþturulacak düþmanýn prefab'ý
+   // public Wave[] waves; ; // Oluþturulacak düþmanýn prefab'ý
     public int numberOfEnemies; // Oluþturulacak düþman sayýsý
     public float spawnInterval; // Düþmanlarýn spawnlanma aralýðý (saniye cinsinden)
     public Transform spawnPoint; // Düþmanlarýn spawn noktasý
@@ -25,7 +25,7 @@ public class Spawner : MonoBehaviour
             // numberOfEnemies kadar düþman spawn edilene kadar spawnInterval aralýklarla çalýþacak döngü
             if (enemiesSpawned < numberOfEnemies)
             {
-                Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
+                //Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
                 enemiesSpawned++;
                 yield return new WaitForSeconds(spawnInterval);
             }

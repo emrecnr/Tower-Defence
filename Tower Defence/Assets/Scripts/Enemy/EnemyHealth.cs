@@ -26,8 +26,18 @@ public class EnemyHealth : MonoBehaviour
         healthSlider.value = maxHealth; // slider ýn deðerini cana eþitle.
         if (maxHealth <=0)
         {
-            Destroy(gameObject);
+            AddMoney();
+            Die();
         }
     
+    }
+    public void Die()
+    {
+        Destroy(gameObject) ;
+        WaveSpawner.enemiesAlive--;
+    }
+    public void AddMoney()
+    {
+        MoneySystem.money += 20;
     }
 }

@@ -47,6 +47,7 @@ public class MovementEnemy : MonoBehaviour
             if (targetIndex >= pathFinding.pathPoints.Count)
             {
                 HealthSystem.instance.TakeDamage(damageAmount);
+                WaveSpawner.enemiesAlive--;
                 Destroy(gameObject);
             }
         }

@@ -7,9 +7,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
-    
 
-    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -35,12 +33,15 @@ public class PauseMenu : MonoBehaviour
     public void Retry() // Baþa sar
     {
         PauseGame();
+      
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
     }
 
     public void Menu() // Menu Button
     {
         Debug.Log("Go to Menu");
+        SceneManager.LoadScene(0);
     }
 
 }
