@@ -275,6 +275,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167401694}
   m_CullTransparentMesh: 1
+--- !u!114 &203198223 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8302199260621992880, guid: 55335711f78aec740bb48aea4c8bc52a, type: 3}
+  m_PrefabInstance: {fileID: 651209383}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b8e14d78a25a54898ee0f1d8a174b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &204878496
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,6 +567,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602407393}
   m_CullTransparentMesh: 1
+--- !u!1001 &651209383
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8302199260621992881, guid: 55335711f78aec740bb48aea4c8bc52a, type: 3}
+      propertyPath: m_Name
+      value: Scene Fader
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302199260621992883, guid: 55335711f78aec740bb48aea4c8bc52a, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302199260621992883, guid: 55335711f78aec740bb48aea4c8bc52a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.6574597
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302199260621992883, guid: 55335711f78aec740bb48aea4c8bc52a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.44715047
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302199260621992883, guid: 55335711f78aec740bb48aea4c8bc52a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0015424341
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302199260621992883, guid: 55335711f78aec740bb48aea4c8bc52a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302199260621992883, guid: 55335711f78aec740bb48aea4c8bc52a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302199260621992883, guid: 55335711f78aec740bb48aea4c8bc52a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302199260621992883, guid: 55335711f78aec740bb48aea4c8bc52a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302199260621992883, guid: 55335711f78aec740bb48aea4c8bc52a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302199260621992883, guid: 55335711f78aec740bb48aea4c8bc52a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302199260621992883, guid: 55335711f78aec740bb48aea4c8bc52a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 55335711f78aec740bb48aea4c8bc52a, type: 3}
 --- !u!1 &904330637
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,6 +789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7be815e999b8a458ad7718d42d3420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneFader: {fileID: 203198223}
 --- !u!1 &1230849656
 GameObject:
   m_ObjectHideFlags: 0

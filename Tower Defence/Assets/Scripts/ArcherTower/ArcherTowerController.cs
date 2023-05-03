@@ -36,7 +36,7 @@ public class ArcherTowerController : MonoBehaviour
             fireCountdown = 3f / fireRate;
 
         }
-        //else { currentTarget = null; }
+        
 
         // Ok fýrlatma sayacý azaltýlýr.
         fireCountdown -= Time.deltaTime;

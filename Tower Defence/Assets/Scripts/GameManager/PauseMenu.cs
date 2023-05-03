@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
+    public SceneFader sceneFader;
+    public string menuSceneName = "MainMenu";
 
     void Update()
     {
@@ -30,18 +32,19 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void Retry() // Baþa sar
+    public void Retry() // Tekrar yükle
     {
         PauseGame();
-      
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
         
     }
 
     public void Menu() // Menu Button
     {
         Debug.Log("Go to Menu");
-        SceneManager.LoadScene(0);
+        PauseGame();
+        sceneFader.FadeTo("MainMenu");
     }
 
 }

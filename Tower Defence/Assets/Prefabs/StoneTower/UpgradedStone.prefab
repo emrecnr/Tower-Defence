@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 6681831584962674178, guid: 5d553565bd756a24593e99524f625a04, type: 3}
-  explosionRadius: 0.5
-  damage: 50
+  explosionRadius: 0.8
+  damage: 75
 --- !u!58 &4526010366937139638
 CircleCollider2D:
   m_ObjectHideFlags: 0

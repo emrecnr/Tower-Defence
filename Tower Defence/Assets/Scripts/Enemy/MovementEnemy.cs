@@ -48,6 +48,7 @@ public class MovementEnemy : MonoBehaviour
             {
                 HealthSystem.instance.TakeDamage(damageAmount);
                 WaveSpawner.enemiesAlive--;
+                FindObjectOfType<EnemyHealth>().AddMoney();
                 Destroy(gameObject);
             }
         }

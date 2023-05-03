@@ -7,7 +7,7 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     private float speed = 10f;
-    int damageAmount = 2;
+    int damageAmount = 35;
     private Transform targetEnemy;
     Rigidbody2D arrowrb2;
 

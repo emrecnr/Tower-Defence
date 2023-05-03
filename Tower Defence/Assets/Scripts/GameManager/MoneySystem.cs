@@ -7,7 +7,7 @@ public class MoneySystem : MonoBehaviour
     // Start is called before the first frame update
     public static int money;
 
-    public int startMoney = 350;
+    private int startMoney = 225;
 
 
     private void Start()

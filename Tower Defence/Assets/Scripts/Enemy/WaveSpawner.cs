@@ -7,7 +7,7 @@ public class WaveSpawner : MonoBehaviour
 {
     public static int enemiesAlive = 0;
     public Wave[] waves;
-    
+    public Manager manager;
     public Transform spawnPoint;
 
     public float timeBetweenWaves = 5f;
@@ -18,11 +18,12 @@ public class WaveSpawner : MonoBehaviour
 
     public TextMeshProUGUI waveText;
 
-    private int waveNumber = 0;
+    private int waveNumber = 1;
 
     void Start()
     {
         enemiesAlive = 0;
+        waveText.text = 0 + "/" + 4;
     }
 
     void Update()
@@ -33,7 +34,7 @@ public class WaveSpawner : MonoBehaviour
         }
         if (waveIndex == waves.Length)
         {
-            Debug.Log("Level Won!!");
+            manager.WinLevel();
             this.enabled = false;
         }
         if (waveNumber>5)
@@ -44,18 +45,20 @@ public class WaveSpawner : MonoBehaviour
         {
             StartCoroutine(SpawnWave());  
             countdown = timeBetweenWaves;
-            waveText.text = waveNumber.ToString()+"/"+5;
+            waveText.text = waveNumber.ToString()+"/"+4;
             return;
         }
         countdown -= Time.deltaTime;
     }
     IEnumerator SpawnWave()
     {
+        HealthSystem.rounds++;
         Wave wave = waves[waveIndex];
+        enemiesAlive = wave.count;
         for (int i = 0; i < wave.count; i++)
         {
             SpawnEnemy(wave.enemy);
-            yield return new WaitForSeconds(1f/wave.rate);
+            yield return new WaitForSeconds(3f/wave.rate);
         }
         waveIndex++;
         waveNumber++;
@@ -64,6 +67,7 @@ public class WaveSpawner : MonoBehaviour
     void SpawnEnemy(GameObject enemy)
     {
         Instantiate(enemy,spawnPoint.position,Quaternion.identity);
-        enemiesAlive++;
+        
     }
+    //https://www.canva.com/design/DAFhy3ihtgo/n8fmv8OfYyBRvmP0PQktcQ/edit
 }

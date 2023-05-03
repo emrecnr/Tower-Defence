@@ -12,17 +12,16 @@ public class HealthSystem : MonoBehaviour
     }
     public int maxHealth = 5;
     public Slider healthSlider;
+    public static int rounds;
     void Start()
     {
         healthSlider.maxValue = maxHealth;
         healthSlider.value = maxHealth;
+        rounds = 0;
     }
 
 
-    void Update()
-    {
-
-    }
+   
 
     public void TakeDamage(int damageAmount)
     {

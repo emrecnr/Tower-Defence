@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int maxHealth = 5;
+    int maxHealth = 100;
+
     public Slider healthSlider;
+
     void Start()
     {
         healthSlider.maxValue = maxHealth;
@@ -31,13 +33,15 @@ public class EnemyHealth : MonoBehaviour
         }
     
     }
+
     public void Die()
     {
         Destroy(gameObject) ;
         WaveSpawner.enemiesAlive--;
     }
+
     public void AddMoney()
     {
-        MoneySystem.money += 20;
+        MoneySystem.money += 25;
     }
 }
